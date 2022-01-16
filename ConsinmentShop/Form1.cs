@@ -14,6 +14,7 @@ namespace ConsinmentShop
     public partial class Form1 : Form
     {
 
+        private decimal Store_Profit=0;
         //List of vendors
         //List of Item per vendor rate
         //Each vendor can have default commision rate
@@ -73,7 +74,7 @@ namespace ConsinmentShop
             {
                 FirstName="Clara",
                 LastName="Dyr",
-                Commission=0.7
+                Commission=0.5
 
             };
 
@@ -103,13 +104,14 @@ namespace ConsinmentShop
                 item.sold = true;
 
                 item.Owner.PaymenttDue += (decimal)item.Owner.Commission * item.Price;
+                Store_Profit += (1 - (decimal)item.Owner.Commission) * item.Price;
             }
 
             cartItem.Clear();
             // it will show to item display which one sold ==false 
 
             itemBinding.DataSource = store.Items.Where(c => c.sold == false).ToList();
-
+            store_value_lbl.Text = $"{Store_Profit}";
             itemBinding.ResetBindings(false);
             cartBinding.ResetBindings(false);
             vendorBinding.ResetBindings(false);

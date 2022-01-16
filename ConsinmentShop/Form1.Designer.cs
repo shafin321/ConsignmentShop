@@ -38,6 +38,8 @@ namespace ConsinmentShop
             this.makePurchese_btn = new System.Windows.Forms.Button();
             this.vendor_lbl = new System.Windows.Forms.Label();
             this.VendorListBox = new System.Windows.Forms.ListBox();
+            this.StoreProfit_lbl = new System.Windows.Forms.Label();
+            this.store_value_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // header_txtlbl
@@ -98,7 +100,7 @@ namespace ConsinmentShop
             // 
             // makePurchese_btn
             // 
-            this.makePurchese_btn.Location = new System.Drawing.Point(635, 274);
+            this.makePurchese_btn.Location = new System.Drawing.Point(645, 261);
             this.makePurchese_btn.Name = "makePurchese_btn";
             this.makePurchese_btn.Size = new System.Drawing.Size(81, 31);
             this.makePurchese_btn.TabIndex = 6;
@@ -124,11 +126,31 @@ namespace ConsinmentShop
             this.VendorListBox.Size = new System.Drawing.Size(202, 144);
             this.VendorListBox.TabIndex = 7;
             // 
+            // StoreProfit_lbl
+            // 
+            this.StoreProfit_lbl.AutoSize = true;
+            this.StoreProfit_lbl.Location = new System.Drawing.Point(492, 301);
+            this.StoreProfit_lbl.Name = "StoreProfit_lbl";
+            this.StoreProfit_lbl.Size = new System.Drawing.Size(93, 20);
+            this.StoreProfit_lbl.TabIndex = 9;
+            this.StoreProfit_lbl.Text = "Store Profit:";
+            // 
+            // store_value_lbl
+            // 
+            this.store_value_lbl.AutoSize = true;
+            this.store_value_lbl.Location = new System.Drawing.Point(587, 301);
+            this.store_value_lbl.Name = "store_value_lbl";
+            this.store_value_lbl.Size = new System.Drawing.Size(49, 20);
+            this.store_value_lbl.TabIndex = 10;
+            this.store_value_lbl.Text = "$0.00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.store_value_lbl);
+            this.Controls.Add(this.StoreProfit_lbl);
             this.Controls.Add(this.vendor_lbl);
             this.Controls.Add(this.VendorListBox);
             this.Controls.Add(this.makePurchese_btn);
@@ -156,6 +178,8 @@ namespace ConsinmentShop
         private System.Windows.Forms.Button makePurchese_btn;
         private System.Windows.Forms.Label vendor_lbl;
         private System.Windows.Forms.ListBox VendorListBox;
+        private System.Windows.Forms.Label StoreProfit_lbl;
+        private System.Windows.Forms.Label store_value_lbl;
     }
 }
 
